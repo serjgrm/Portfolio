@@ -1,0 +1,10 @@
+.sidepanel{
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 340px;
+    z-index: 3;
+}
