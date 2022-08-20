@@ -15,6 +15,7 @@
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(2,425px) ;
+        justify-content: space-between;
         padding: 60px 65px 0 65px;
         column-gap: 135px;
     }

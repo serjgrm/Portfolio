@@ -1,17 +1,20 @@
 .about{
-    min-height: 840px;
     padding: 120px 0;
     .about-grid{
         display: grid;
-        height: 100%;
-        grid-template: 300px 300px/400px 740px;
+        // height: 100%;
+        grid-template: repeat(2, minmax(300px, auto) ) / 400px minmax(auto, 740px);
         gap: 40px;
         .descr{
             text-align: justify ;
         }
         .about__photo{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
             grid-row: 1/3;
-            background: url(../../img/ME_1.jpeg) center center/cover no-repeat;
         }
         .about__name{
             .name_subtitle{

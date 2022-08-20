@@ -1,0 +1,48 @@
+.price{
+    padding-top: 60px;
+    .divider{
+        @include divider;
+        margin: 0 auto;
+        margin-top: 31px;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template: repeat(3,90px) / 350px 350px;
+        justify-content: space-between;
+        margin-top: 63px;
+        .wrapper__item{
+            position: relative;
+            .wrapper__title{               
+                position: relative;
+                padding-left: 35px;
+                font-weight: 700;
+                font-size: 14px;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background: $main_color;
+                    border-radius: 100%;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .wrapper__dollars{
+                font-size: 14px;
+                font-weight: 700;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .wrapper__descr{
+                font-size: 12px;
+                font-weight: 500;
+                position: absolute;
+                bottom: 30px;
+                left: 33px;
+            }
+        }
+    }
+}
