@@ -313,7 +313,7 @@ template {
 .promo {
   min-height: 100vh;
   position: relative;
-  background: url("../../img/BG_1.jpeg") no-repeat 50%/cover;
+  background: url("../img/BG_1.jpeg") no-repeat 50%/cover;
   padding-top: 205px;
 }
 .promo__title {
