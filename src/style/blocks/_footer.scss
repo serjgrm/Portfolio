@@ -1,0 +1,9 @@
+.footer{
+    margin-top: 60px;
+    &__wrapper{
+        width: 33%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+}

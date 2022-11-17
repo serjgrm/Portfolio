@@ -1,38 +1,69 @@
-const hamburger = document.querySelector('.hamburger'),
-    menu = document.querySelector('.menu'),
-    closeElem = document.querySelector('.menu__close');
+'use strict';
+window.addEventListener('DOMContentLoaded',()=>{
 
-hamburger.addEventListener('click', () => {
-    menu.classList.add('active');
+    // Смена языка
+    const langTrigger = document.querySelector('.promo__lang'),
+          langRu = document.querySelectorAll('.ru'),
+          langEn = document.querySelectorAll('.en');  
+          
+    langTrigger.addEventListener('click',(e)=>{
+        if (e.target.classList.contains('en')) {
+            langEn.forEach(item=>{
+                item.classList.add('hide');
+            });
+            langRu.forEach(item=>{
+                item.classList.remove('hide');
+            });
+        } else if (e.target.classList.contains('ru')){
+            langRu.forEach(item=>{
+                item.classList.add('hide');
+            });
+            langEn.forEach(item=>{
+                item.classList.remove('hide');
+            });
+        }
+    });
+    //
+    const aside = document.querySelectorAll('aside a');
+
+    function hideLinks () {
+        if (document.documentElement.clientHeight + document.documentElement.scrollTop >= 
+            document.documentElement.scrollHeight - 40){
+                aside.forEach(item=>{
+                    item.classList.add('hide');
+                });
+        } else {
+            aside.forEach(item=>{
+                item.classList.remove('hide');
+            });
+        }
+    }
+
+
+
+    window.addEventListener('scroll',hideLinks);
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
-closeElem.addEventListener('click', () => {
-    menu.classList.remove('active');
 
-    function validateForms(form) {
-        $(form).validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-                phone: "required",
-                email: {
-                    required: true,
-                    email: true
-                }
-            },
-            messages: {
-                name: {
-                    required: "Пожалуйста, введите свое имя",
-                    minlength: jQuery.validator.format("Введите {0} символа!")
-                },
-                phone: "Пожалуйста, введите свой номер телефона",
-                email: {
-                    required: "Пожалуйста, введите свою почту",
-                    email: "Неправильно введен адрес почты"
-                }
-            }
-        });
-    };
-});
+
