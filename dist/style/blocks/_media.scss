@@ -105,18 +105,20 @@
             line-height: 31px;
         }
     }
-
-
-
     .resume {
         &__subtitle {
             font-size: 30px;
         }
     }
-
     .portfolio {
         &__wrapper {
             grid-template: auto/ 280px;
+        }
+    }
+    .footer__link{
+        svg{
+            width: 20px;
+            height: 20px;
         }
     }
 }
