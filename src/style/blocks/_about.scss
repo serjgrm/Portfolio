@@ -1,5 +1,6 @@
 .about{
     padding: 120px 0;
+    background-image: radial-gradient(circle closest-side at 33vw 45vh, rgb(255, 252, 216) 10%, rgb(249, 236, 236) 40%, rgba(255, 149, 0,0.3) 100%);
     .about-grid{
         display: grid;
         grid-template: repeat(2, minmax(300px, auto) ) / 400px minmax(auto, 740px);

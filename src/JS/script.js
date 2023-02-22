@@ -1,11 +1,9 @@
 'use strict';
 window.addEventListener('DOMContentLoaded',()=>{
-
-    // Смена языка
+    // Language shifting
     const langTrigger = document.querySelector('.promo__lang'),
           langRu = document.querySelectorAll('.ru'),
           langEn = document.querySelectorAll('.en');  
-          
     langTrigger.addEventListener('click',(e)=>{
         if (e.target.classList.contains('en')) {
             langEn.forEach(item=>{
@@ -23,9 +21,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             });
         }
     });
-    //
     const aside = document.querySelectorAll('aside a');
-
     function hideLinks () {
         if (document.documentElement.clientHeight + document.documentElement.scrollTop >= 
             document.documentElement.scrollHeight - 40){
@@ -38,23 +34,16 @@ window.addEventListener('DOMContentLoaded',()=>{
             });
         }
     }
-
-
-
     window.addEventListener('scroll',hideLinks);
 
-    
+    // Portfolio description 
+    // const portfolioItem = document.querySelector('.portfolio__item'),
+    //       portfolioDescription = document.querySelector('.portfolio__subitem');
 
-
-    
-
-
-
-
-
-
-
-
+    // portfolioItem.addEventListener('mouseover',()=>{
+    //     portfolioDescription.classList.remove('hide')
+    // })
+   
 
 
 

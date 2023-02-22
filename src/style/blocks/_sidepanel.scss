@@ -8,6 +8,11 @@
     height: 140px;
     z-index: 3;
     align-items: center;
+    &__linkedin{
+        transform: rotate(-90deg);
+        position: relative;
+        left: 4px
+    }
     &__link{
         &:hover{
             svg path{
